@@ -107,7 +107,23 @@
                                         <td>{nome}</td>
                                         <td>{telefone}</td>
                                         <td>{email}</td>
-                                        <td>{botao}</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="#" class="btn btn-secondary btn-sm dropdown-toggle" role="button" id="{id}"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações</a>
+                                               
+                                                <div class="dropdown-menu" aria-labelledby="{}">
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#visualizarContato" data-whatever="{id}">
+                                                        <i class="bi-eye"></i> Visualizar
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                       <i class="bi-pencil"> </i> Editar
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        <i class="bi-trash"></i> Excluir
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -143,7 +159,23 @@
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="visualizarContato" tabindex="-1" role="dialog" aria-labelledby="visualizarDadosContato" aria-hidden="true">
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="visualizarDadosContato">Dados do contato</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
